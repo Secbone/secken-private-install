@@ -2,7 +2,4 @@
 
 ## Usage
 
-```
-wget "https://raw.githubusercontent.com/Secbone/secken-private-install/master/private_install.sh"
-./private_install.sh
-```
+`$ wget "https://raw.githubusercontent.com/Secbone/secken-private-install/master/private_install.sh" && bash private_install.sh`
