@@ -13,7 +13,7 @@ rm -rf temp/__MACOSX
 
 read -p "Enter your domain: " domain
 mkdir -p /home/wwwroot/$domain
-mv temp/Secken*/* /home/wwwroot/$domain/
+mv temp/secken*/* /home/wwwroot/$domain/
     chown -R www:www /home/wwwroot/$domain
 rm -rf temp Secken_private_cloud.zip
 server="server {\n\
