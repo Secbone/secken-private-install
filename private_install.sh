@@ -3,15 +3,22 @@
 wget -c http://soft.vpser.net/lnmp/lnmp1.2-full.tar.gz
 tar zxf lnmp1.2-full.tar.gz
 cd lnmp1.2-full
+
+# Setup Secken Domain
+domain="ycprivate.com"
+echo "Please enter your domain for Secken-private (default: ycprivate.com)"
+read -p "Enter your domain: " domain
+
+# Setup LNMP
 bash install.sh lnmp
 
+# Download Secken Private
 echo 'download yangcong private-cloud'
 wget -c https://github.com/secken/secken-private/archive/master.zip -O Secken_private_cloud.zip
 mkdir -p temp
 unzip Secken_private_cloud.zip -d temp
 rm -rf temp/__MACOSX
 
-read -p "Enter your domain: " domain
 mkdir -p /home/wwwroot/$domain
 mv temp/secken*/* /home/wwwroot/$domain/
     chown -R www:www /home/wwwroot/$domain
